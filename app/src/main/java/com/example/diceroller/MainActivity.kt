@@ -16,9 +16,15 @@ class MainActivity : AppCompatActivity() {
         rollButton.setOnClickListener { roolDice() }
     }
 
+    /**
+     * Esta atividade permite ao usuário rolar um dado e visualizar o resultado
+     * na tela.
+     */
+
     private fun roolDice() {
         val dice = Dice(6)
         val diceRool = dice.roll()
+        // Update the screen with the dice roll
         val resultTextView: TextView = findViewById(R.id.textView)
         resultTextView.text = diceRool.toString()
     }
